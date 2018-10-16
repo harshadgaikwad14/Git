@@ -1,1 +1,4 @@
-# git-command
+# Git-Notes
+  - Permission denied error on Github Push
+    - Go to: Control Panel -> User Accounts -> Manage your credentials -> Windows Credentials
+    - Under Generic Credentials there are some credentials related to Github, Click on them and click "Remove".
