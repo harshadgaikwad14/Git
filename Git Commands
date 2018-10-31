@@ -1,0 +1,99 @@
+## Modified files to add in stage 
+## Note : Modified -> Staged
+git add --all
+	or
+git add -A .
+	or
+git add <filename> 
+ 	
+## Staged files to commit on local repository 
+## Note : Staged -> Committed
+git commit -m "Commit Message" 	
+
+## Committed local files push to remote repository
+## Note : Committed -> Pushed
+git push -u origin master 
+
+## Cloning an existing repository
+git clone https://githug.com.........
+
+## to up-to-date local branch
+git pull origin <branchname>
+
+## to check modified list of files before adding and commiting files
+git status
+
+## to check existing and current file changes
+git diff or git diff <filename>	
+
+## to create new file in local repository
+touch <filename>.<extention>
+
+## to see file contents
+cat <filename>.<extention>	
+
+## to delete file
+rm -rf <filename>.<extention>
+
++++++++++++ BRANCHING +++++++++++
+
+## to create new branch in local repository
+git checkout -b <branchname>
+
+## to switch one branch to another branch
+git checkout <branchname>
+
+## to check list of files and folder in local branch repository
+ls
+
++++++++++++ MERGE BRANCH +++++++++++
+
+## to check merged branch detail
+git branch --merged
+
+## to delete branch from local
+git branch -d <branchname>
+
+## to up-to-date local branch
+git fetch origin
+
+## to create new branch from existing branch
+git checkout -b <new branchname> origin/<existing branchname>
+
+## to merge current branch list of files to destination branchname
+## before merge command you have to switch to source branch
+git merge <branchname>
+
++++++++++++ FORKING SOMEONE ELSE IS GITHUB REPOSITORY +++++++++++
+
+forking use when you want to code contribution but you do not have a access of destination repository
+
+so first login to your github account and create repo and branch for code contribution.
+then execute below command
+git remote add upstream https://github.com/<destination repository>
+
+## to check forking repo
+git remote -v
+
+git fetch upstream
+
+git merge upstream/master
+
+git checkout -b newBranch
+
+git push -u origin newBranch
+
+
++++++++++++ REVERT COMMIT +++++++++++
+
+## to see the recent commits
+git log
+
+git checkout -b <newBranch> <commit number>
+
+git push origin/<newBranch>
+
+
+git revert --no-commit <commit number>..HEAD
+
+git reset --hard <commit number>
